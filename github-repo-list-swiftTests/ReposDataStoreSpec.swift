@@ -32,7 +32,8 @@ class ReposDataStoreSpec: QuickSpec {
                 
                 waitUntil(action: { (done) in
                     store.getRepositoriesWithCompletion {
-                        expect(store.repositories.count).to(equal(2))
+                        expect(store.repositories.count).to(equal(4))
+        
                         
                         let repo1 = store.repositories[0]
                         expect(repo1.fullName).to(equal("mojombo/grit"))
